@@ -1,10 +1,10 @@
 from rest_framework import serializers
 from .models import Produto
 
-class ProdutoSerializers(serializers.modelSerializers):
+class ProdutoSerializers(serializers.ModelSerializer):
     class Meta:
         model = Produto
-        fiels = [
+        fields = [
             'id',
             'codigoProduto',
             'tituloProduto',
@@ -13,6 +13,4 @@ class ProdutoSerializers(serializers.modelSerializers):
             'imagemProduto',
             'categoriaProduto',
             'exibirHome',
-
         ]
-
